@@ -275,6 +275,7 @@ public class BaiduPushClient implements BaiduPush {
 		PushSignatureDigest digest = new PushSignatureDigest();
 		String sign = digest.digest(BaiduPushConstants.HTTPMETHOD, surl, secretKey, params);
 		params.put("sign", sign);
+		params.put("content_type", "application/json;charset=utf-8");
 		
 		YunHttpClient client = new YunHttpClient();
 		client.addHttpCallback(logHttpCallback);

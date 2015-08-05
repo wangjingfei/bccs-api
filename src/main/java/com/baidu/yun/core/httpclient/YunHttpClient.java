@@ -260,7 +260,7 @@ public class YunHttpClient implements YunHttpObservable {
 		conn.setDoInput(true);
 		conn.setUseCaches(false);
 		conn.setRequestProperty("Content-Type",
-				"application/x-www-form-urlencoded;charset=utf-8");
+				"application/json;charset=utf-8");
 	
 		String sysName = getLocalHostSysName();
 		String sysVersion = getLocalHostSysVersion();
